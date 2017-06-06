@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NFOrce Egosearch
 // @namespace    http://www.nfohump.com/
-// @version      0.1
+// @version      0.2
 // @description  Show/Hide search results from egosearch
 // @author       https://github.com/SirPumpAction
 // @match        http://www.nfohump.com/forum/search.php?search_id=egosearch
@@ -26,7 +26,7 @@
     var $hider = $('<li><a href="#">Show/Hide</a></li>');
     $hider.on('click', function(){
         $('.thidden').toggle();
-        $('.rhidden').toggle();
+        $('.rhidden').toggle(300);
     });
 
     $('#menuLeftHeader1 + .menuLeftContainer > ul').append($hider);
